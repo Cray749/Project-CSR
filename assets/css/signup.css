@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box span {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.input-box input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.organization-type {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.organization-title {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.category {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 20px;
+}
+
+.category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.category input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.category input[type="radio"]:checked {
+    background-color: #000;
+    border-color: #000;
+}
+
+.button {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.button input {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button input:hover {
+    background: #333;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

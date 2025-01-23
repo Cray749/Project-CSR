@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/company.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Corporate Registration Form</h2>
+        <form>
+            <!-- Company Details -->
+            <h4 class="section-title">1. Company Details</h4>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="companyName" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="industry" class="form-label">Industry</label>
+                    <input type="text" class="form-control" id="industry" placeholder="E.g., IT, Healthcare, Finance" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="website" class="form-label">Company Website</label>
+                    <input type="url" class="form-control" id="website" placeholder="https://example.com" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="location" class="form-label">Company Location</label>
+                    <input type="text" class="form-control" id="location" placeholder="City, Country" required>
+                </div>
+            </div>
+
+            <!-- CSR Interests -->
+            <h4 class="section-title mt-4">2. CSR Interests</h4>
+            <div class="row g-3">
+                <div class="col-12">
+                    <label for="csrFocus" class="form-label">Which social causes does your company focus on?</label>
+                    <select class="form-select" id="csrFocus" required>
+                        <option value="">Select an option...</option>
+                        <option>Education</option>
+                        <option>Environmental Sustainability</option>
+                        <option>Healthcare</option>
+                        <option>Women Empowerment</option>
+                        <option>Poverty Alleviation</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="csrBudget" class="form-label">CSR Budget (Annual)</label>
+                    <input type="number" class="form-control" id="csrBudget" placeholder="Enter budget in INR" required>
+                </div>
+            </div>
+
+            <!-- Partnership Preferences -->
+            <h4 class="section-title mt-4">3. Partnership Preferences</h4>
+            <div class="row g-3">
+                <div class="col-12">
+                    <label for="partnershipType" class="form-label">Type of Collaboration Preferred</label>
+                    <select class="form-select" id="partnershipType" required>
+                        <option value="">Select an option...</option>
+                        <option>Financial Support</option>
+                        <option>Volunteering Programs</option>
+                        <option>Product/Service Donations</option>
+                        <option>Event Sponsorship</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="contactPerson" class="form-label">Primary Contact Person</label>
+                    <input type="text" class="form-control" id="contactPerson" placeholder="Full Name" required>
+                </div>
+                <div class="col-6">
+                    <label for="contactEmail" class="form-label">Contact Email</label>
+                    <input type="email" class="form-control" id="contactEmail" placeholder="example@company.com" required>
+                </div>
+                <div class="col-6">
+                    <label for="contactPhone" class="form-label">Contact Phone</label>
+                    <input type="tel" class="form-control" id="contactPhone" placeholder="+91 12345 67890" required>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid gap-2 mt-4">
+                <button type="submit" class="btn btn-primary">Submit Registration</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Redirect to a confirmation page or another action
+            window.location.href = "someConfirmationPage.html"; // Change this to the desired page
+        });
+    </script>
+</body>
+</html>

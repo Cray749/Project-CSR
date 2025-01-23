@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="assets/css/signup.css"> <!-- Changed to relative path -->
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form onsubmit="return handleFormSubmit()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" name="fullName" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Organization Name</span>
+            <input type="text" placeholder="Enter name of your Organization" name="OrganizationName" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" name="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="number" placeholder="Enter your number" name="PhoneNo" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" id="password" placeholder="Enter your password" name="Password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            <span id="passwordError" class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="organization-type">
+          <span class="organization-title">Are you a Company or NGO?</span>
+          <div class="category">
+            <label for="company-dot-1">
+              <input type="radio" name="organizationType" id="company-dot-1" value="Company" required>
+              <span class="organization">Company</span>
+            </label>
+            <label for="company-dot-2">
+              <input type="radio" name="organizationType" id="company-dot-2" value="NGO" required>
+              <span class="organization">NGO</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function handleFormSubmit() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var errorMessage = document.getElementById("passwordError");
+
+      if (password !== confirmPassword) {
+        errorMessage.textContent = "⚠ Password does not match!";
+        errorMessage.style.color = "red";
+        return false; // Prevent redirection
+      } else {
+        errorMessage.textContent = ""; 
+      }
+
+      var organizationType = document.querySelector('input[name="organizationType"]:checked').value;
+      if (organizationType === "Company") {
+        window.location.href = "company.html"; // Redirect to company page
+      } else {
+        window.location.href = "ngo.html"; // Redirect to NGO page
+      }
+      return false; // Prevent default form submission
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 20px;
+    color: #333;
+}
+
+.login-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Navigation */
+nav {
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Left Panel (Quick Stats) */
+.left-panel {
+    width: 220px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h2 {
+    font-size: 16px;
+    color: #333;
+}
+
+.stat-box {
+    background: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.stat-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Main Content */
+.content-area {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-area h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Project Cards */
+.project-card {
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.project-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.connect-btn {
+    background: #4CAF50;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Search & Filters */
+.search-filter {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Impact Metrics */
+.impact-metrics {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.impact-metrics h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.impact-metrics p {
+    font-size: 14px;
+    color: #666;
+}
